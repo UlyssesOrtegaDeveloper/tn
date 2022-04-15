@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    overflow: hidden;
+}
+
+a:link, a:visited, a:active, a:hover, a {
+    text-decoration: none !important;
+}

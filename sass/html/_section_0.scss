@@ -1,0 +1,259 @@
+#idSection_0 {
+    height: 100vh;
+
+    .container_asistencia_clasificacion_carrera {
+        height: 600px;
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+
+        .wrapper_asistencia, .wrapper_clasificacion, .wrapper_carrera {
+            overflow-y: scroll;
+            
+            ul:nth-child(1) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                background-color: black;
+
+                li {
+                    padding: 1em;
+                }
+            }
+
+            ul:nth-child(2) {
+                
+                li {
+                    padding: 1em; 
+
+                    &:nth-child(even) {
+                        background-color: rgb(84, 84, 84);
+                    }
+
+                    &:nth-child(odd) {
+                        background-color: rgb(70, 70, 70);
+                    }
+                }
+            }
+
+            .wrapper_asistencia {
+
+                ul:nth-child(1) {
+                    
+                    li:nth-child(2) {
+                        justify-items: end;
+                    }
+                }
+            }            
+        }
+    }
+}
+
+
+@media only screen and (max-width: $mobile) { 
+
+    #idSection_0 {
+        padding: 1em;
+        border: 1px dashed white;
+        height: calc(100vh - 55px);
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .container_logo_infoGP {
+                
+                h2 {
+                    display: none; /// oculto logo
+                }
+            }
+
+            .container_hub {
+                background-color: rgb(79, 79, 79); //! trasladar
+
+                ul.wrapper_estadisticas_piloto {
+                    
+                    /// estructura
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    
+                    li {
+                        background-color: rgb(62, 62, 62); //! trasladar
+                        margin: 1em;
+                    }
+                }
+  
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $tablet) { 
+
+    #idSection_0 {
+        padding: 1em;
+        border: 1px dashed white;
+    }
+}
+
+@media only screen and (min-width: $desktop) { 
+
+    #idSection_0 {
+        padding: 1em;
+        border: 1px dashed white;
+
+        header {
+
+            .container_logo_menu_login {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                background-color: rgb(60, 66, 26);
+                position: sticky;
+                top: 0;
+                z-index: 20;
+
+                .wrapper_logo {
+                    padding: 1em;
+                    font-size: 24px;
+                }
+
+                .wrapper_menu {
+                    display: grid;
+                    padding: 1em;
+                    
+                    ul {
+                        margin: auto;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+                        
+                        margin-left: 5em;
+                        margin-right: 5em;
+
+                        li {
+
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                .wrapper_login {
+                    display: grid;
+                    padding: 1em;
+
+                    ul {
+                        margin: auto;
+                    }
+                }
+            }
+
+            .container_hub_login {
+                background-color: rgb(70, 98, 70);
+                padding: 1em;
+
+                .wrapper_hub {
+                    display: grid;
+                    grid-template-columns: auto auto;
+
+                    ul.wrapper_hub_info {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                    }
+
+                    .wrapper_hub_foto_info {
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        justify-items: end;
+
+                        ul:nth-child(1) {
+                            border: 1px dashed white;
+                            height: 60px;
+                            width: 60px;
+                        }
+
+                        ul:nth-child(2) {
+                            border: 1px dashed white;
+                            
+                            li:nth-child(2) {
+                                color: grey;
+                                font-size: 12px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .container_calendario {
+            padding-top: 1em;
+            ul {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        
+                background-color: black;
+        
+                li {
+                    padding: 1em; margin: 5px;
+                    text-align: center;
+                    border: 1px dashed white;
+                    font-size: xx-small;
+                    cursor: pointer;
+                }
+    
+                li.GP_finalizado {
+                    background-color: rgb(45, 45, 45);
+                }
+            }
+            
+        }
+
+        .container_informacionGP {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            
+            ul:nth-child(1) {
+                display: grid;
+                grid-template-columns: 50px 1fr;
+                place-items: center;
+
+                li {
+                    padding: 1em;
+                }
+
+                li:nth-child(1) {
+                    background-color: black;
+                    
+                }
+
+                li:nth-child(2) {
+                    background-color: white;
+                    color: black;
+                }
+            }
+
+            ul:nth-child(2) {
+
+                display: grid;
+                grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;
+                place-items: center;
+
+                
+
+                li:nth-child(1) {
+                    
+                    padding: 1em;
+                    
+                    img {
+                        height: 30px;
+                    }
+                }
+
+                
+            }
+        }
+
+        
+    }
+}

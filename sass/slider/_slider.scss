@@ -1,0 +1,22 @@
+
+
+@media only screen and (max-width: $mobile) { 
+
+    .wrapper_asistencia, .wrapper_clasificacion, .wrapper_carrera {
+        width: 100%;
+    }
+
+    .slider {
+        display: flex;
+        min-width: 90vw;
+
+        overflow: scroll; /// escoder lo que sobra y solo usar el scroll
+        scroll-snap-type: x mandatory; /// debe acabar en un anclaje
+        
+        div {
+            cursor: all-scroll;
+            min-width: 90vw;
+            scroll-snap-align: start;
+        }
+    }
+}

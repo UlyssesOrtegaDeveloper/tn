@@ -1,0 +1,145 @@
+
+.modal-activo-right { /// abre el modal
+    right: 0 !important;
+}
+
+.modal-activo-left { /// abre el modal
+    left:0 !important;
+}
+
+.fondo_modal_active { /// abre el fondo oscuro del modal
+    display: block !important;
+}
+
+.modal-fondo-oscuro {
+    display: none; /// desactivado por defecto
+    /// tamaño y color
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.588);
+    /// configuracion
+    position: fixed;
+    left: 0px;
+    top: 0;
+    z-index: 1;
+}
+
+.close_modal {
+    display: grid;
+    justify-content: end;
+    background-color: rgb(47, 67, 103);
+    
+    i {
+        padding: 1em;
+        cursor: pointer;
+    }
+}
+
+
+@media only screen and (max-width: $mobile) {
+
+    
+
+    .modal_hub {
+        
+        /// estructura modal
+        position: fixed; right: -80%; top: 0;
+
+        form {
+            height: 100vh;
+            /* display: grid; */
+
+            input {
+                width: 90%;
+                padding: 1em;
+                margin: 1em;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            
+            border: 1px dashed white;
+
+            button {
+                background-color: rgb(156, 186, 112);
+                width: 90%;
+                padding: 1em;
+                cursor: pointer;
+                border: 0;
+            }
+        }
+    }
+
+    .modal_hub, .modal_menu, .modal_calendario {
+        border: 1px dashed white;  //!  QUITAR
+
+        z-index: 10;
+        transition: all .5s;
+        
+        /// estructura modal
+        position: fixed; top: 0;
+        width: 80%; height: 100%;
+        /// estructura datos
+        text-align: center;
+        background-color: rgba(169, 115, 115, 0.85);
+
+        ul {
+
+            li {
+
+                padding: 1em;
+            }
+        }
+    }
+
+    .modal_calendario {
+        right: -80%;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+            li {
+                border: 1px dashed white;
+            }
+        }
+    }
+
+    .modal_menu {
+        left: -80%;
+
+        ul {
+
+            li {
+
+                a {
+
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+
+}
+
+@media only screen and (min-width: $desktop) {
+
+    .close_modal {
+        display: none;
+    }
+
+    .container_hub_login {
+        
+
+        .wrapper_login {
+            display: grid;
+            justify-content: end;
+
+            display: none;
+        }
+    }
+    
+}

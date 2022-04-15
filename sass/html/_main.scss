@@ -1,0 +1,20 @@
+
+
+@media only screen and (min-width: $mobile) { 
+
+    /// width > 100%
+}
+
+@media only screen and (min-width: $tablet) { 
+
+    /// width > 100%
+}
+
+@media only screen and (min-width: $desktop) { 
+
+    main {
+        background-color: rgb(40, 40, 40);
+        margin: 0 auto;
+        width: $ancho_main;
+    }
+}

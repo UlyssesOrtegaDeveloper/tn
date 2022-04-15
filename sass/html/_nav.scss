@@ -1,0 +1,101 @@
+@media only screen and (max-width: $mobile) { 
+
+    nav.container_nav_mobile {
+        padding: 1em;
+        border: 1px dashed white;
+
+        ul {
+            display: grid;
+            grid-template-columns: 50px auto 50px 50px;
+
+            li {
+                display: grid; 
+                /* justify-content: center; */ 
+                align-items: center;
+        
+                i, a {
+                    cursor: pointer;
+                    text-align: center;
+                }
+            }
+
+            li:nth-child(1) {
+                display: grid;
+                justify-content: start;
+                margin-left: 10px;
+            }
+
+            li:nth-child(2) {
+                display: grid;
+                justify-content: center;
+            }
+
+            li:nth-child(3), li:nth-child(4) {
+                display: grid;
+                justify-content: end;
+                margin-right: 10px;
+            }
+
+            
+        }
+    }
+
+}
+
+@media only screen and (min-width: $tablet) { 
+
+    nav.container_nav_mobile {
+        padding: 1em;
+        border: 1px dashed white;
+    }
+}
+
+@media only screen and (min-width: $desktop) { 
+
+    
+    nav.container_nav_mobile {
+        display: none;
+    }
+
+    nav.container_nav_desktop {
+
+        .wrapper_nav_desktop {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            
+            ul:nth-child(1) {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                justify-content: start;
+
+                li:nth-child(1) {
+                    background-color: black;
+                    color: whitesmoke;
+                    padding: 1em;
+                }
+
+                li:nth-child(2) {
+                    background-color: whitesmoke;
+                    color: black;
+                    padding: 1em;
+                }
+            }
+            
+            ul:nth-child(2) {
+                display: grid;
+                grid-template-columns: repeat(5, auto);
+                gap: 1em;
+
+                li {
+                    
+                    padding: 1em;
+
+                    a{
+                        color: whitesmoke;
+                    }
+                }
+            }
+        }
+        
+    }
+}
